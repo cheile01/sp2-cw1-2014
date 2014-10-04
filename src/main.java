@@ -16,17 +16,19 @@ public class main {
         int input = 1;
         int[] first = new int[100];
         int i = 0;
-        while(input != 0){
+        do{
             System.out.print("whats your number? ");
             input = in.nextInt();
-            first[i++] = input;
-        }
-        inArray(6, first);
-        
+            if(!inArray(input, first)){
+               first[i++] = input; 
+            } 
+        }while(input != 0);
     }
 
     /**
-     * @param int the command line arguments
+     * @param needle(int) - value searched for
+     * @param haystack[int] array of int to be searched
+     * @return boolean true if the needle is in haystack
      */
     public static boolean inArray(int needle, int[] haystack ){
         boolean eval = false;
@@ -35,11 +37,27 @@ public class main {
             //shorten processing time.
             if(straw==0){
                 break;
-            }
-            
-            
-        }
-        
+            }  
+        }  
         return eval;
     }
+    
+    /**
+     * @param values(int) array to output
+     * @param delimiter(String) delimiter to separate integers
+     * @return String of values with delimiter
+     */
+    public static String delimit(int[] values, String delimiter ){
+        String result = "";
+        for (int value : values) {
+            result += value+delimiter;
+        }  
+        return result;
+    }
+    
+    
+    
+    
+    
+    
 }
