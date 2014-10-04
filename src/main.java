@@ -13,10 +13,12 @@ public class main {
     public static void main(String[] args) {
         //TODO: code application logic here
         Scanner in = new Scanner(System.in);
-        int i;
+        int i = 1;
+        
         while(i != 0){
             System.out.print("whats your number? ");
             i = in.nextInt();
+            
         }
         
     }
