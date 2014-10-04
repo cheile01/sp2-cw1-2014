@@ -13,13 +13,15 @@ public class main {
     public static void main(String[] args) {
         //TODO: code application logic here
         Scanner in = new Scanner(System.in);
-        int i = 1;
-        
-        while(i != 0){
+        int input = 1;
+        int[] first = new int[100];
+        int i = 0;
+        while(input != 0){
             System.out.print("whats your number? ");
-            i = in.nextInt();
-            
+            input = in.nextInt();
+            first[i++] = input;
         }
+        inArray(6, first);
         
     }
 
@@ -30,7 +32,12 @@ public class main {
         boolean eval = false;
         
         for (int straw : haystack) {
-            System.out.println(straw);
+            //shorten processing time.
+            if(straw==0){
+                break;
+            }
+            
+            
         }
         
         return eval;
