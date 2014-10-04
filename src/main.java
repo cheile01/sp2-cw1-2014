@@ -12,8 +12,8 @@ public class main {
      */
     public static void main(String[] args) {
 
-        int[] first = getIntArray("Enter data for array 1 (0 to finish): ");
-        int[] second = getIntArray("Enter data for array 2 (0 to finish): ");
+        int[] first = getIntArray("Enter data for array 1");
+        int[] second = getIntArray("Enter data for array 2");
         
         System.out.println();
         System.out.println("Values for array 1 is: "+delimit(first," "));
@@ -59,7 +59,7 @@ public class main {
     }
     
     /**
-     * @param message(String) Message to output
+     * @param message(String) Message to output (adds string: " (0 to finish): " per default)
      * @return array of int
      */
     public static int[] getIntArray(String message ){
@@ -68,7 +68,7 @@ public class main {
         int[] array = new int[100];
         int i = 0;
         do{
-            System.out.print(message);
+            System.out.print(message + " (0 to finish): ");
             input = in.nextInt();
             if(!inArray(input, array)){
                array[i++] = input; 
